@@ -40,7 +40,6 @@ Status GetElem(LinkList L,int i,ElemType *e){
     return OK;
 }
 
-
 //单链表的插入
 //在L中第i个结点位置之前插入新的数据元素e，L的长度加1
 Status ListInsert(LinkList *L,int i,ElemType e){
