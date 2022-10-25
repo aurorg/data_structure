@@ -22,6 +22,7 @@ LinkList Creat_LinkList1(){
     }
     return H;
 }
+ 
 
 //尾插法建立单链表
 LinkList creat_LinkList2(){
