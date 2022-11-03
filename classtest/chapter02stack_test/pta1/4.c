@@ -95,13 +95,14 @@ int IsFullQueue(SeQueue *Q){
 		return 0;
 }
 int EnQueue(SeQueue *Q, ElemType x){
-	
+
 	if(IsFullQueue(Q))
 		return 0;
 	Q->rear=(Q->rear+1)%MAXSIZE;
 	Q->elem[Q->rear]=x;
 	Q->quelen++;
 	return 1;
+    
 }
 int DelQueue(SeQueue *Q, ElemType *x){
 	
