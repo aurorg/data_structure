@@ -240,3 +240,38 @@ void DestroyQueue(SeQueue *Q)
     free(Q);
 }
 /* 请在这里填写答案 */
+int IsFullQueue(SeQueue *Q){
+	if(Q->quelen == MAXSIZE){
+		return 1;
+    }
+	else{ 
+		return 0;
+    }
+}
+int IsEmptyQueue(SeQueue *Q){
+	if(Q->quelen == 0){
+		return 1;
+    }
+	else{ 
+		return 0;
+    }
+}
+//入队
+int EnQueue(SeQueue *Q, ElemType x){
+if(IsFullQueue(Q)){
+		return 0;
+}
+	Q->rear=(Q->rear+1)%MAXSIZE;
+	Q->elem[Q->rear]=x;
+	Q->quelen++;
+	return 1;
+}
+//出队
+int DelQueue(SeQueue *Q, ElemType *x){
+	if (IsEmptyQueue(Q)){
+	    return 0;
+    }
+		Q->quelen--;
+		*x = Q->elem[(Q->rear - Q->quelen+MAXSIZE)%MAXSIZE];
+		return 1; 
+}
