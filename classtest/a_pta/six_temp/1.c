@@ -12,6 +12,7 @@ void printftree(char data);
 void preOrder(BiTree root);
 void inOrder(BiTree root);
 void postOrder(BiTree root);
+
 int main(){
     BiTree bi_tree=NULL;
     createBiTree(&bi_tree);
@@ -21,6 +22,20 @@ int main(){
 
     return 0;
 }
+
+// void createBiTree(BiTree *bi_tree){
+//     char c;
+//     c=getchar();
+//     if(c=='#'){
+//         *bi_tree=NULL;
+//     }else{
+//         *bi_tree=(BiTree)malloc(sizeof(treenode));
+//         (*bi_tree)->data=c;
+//         createBiTree(&((*bi_tree)->lchild));
+//         createBiTree(&((*bi_tree)->rchild));
+
+//     }
+// } 
 
 void createBiTree(BiTree *bi_tree){
     char c;
@@ -32,9 +47,8 @@ void createBiTree(BiTree *bi_tree){
         (*bi_tree)->data=c;
         createBiTree(&((*bi_tree)->lchild));
         createBiTree(&((*bi_tree)->rchild));
-
     }
-} 
+}
 
 void printftree(char data){
     putchar(data);
