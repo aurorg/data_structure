@@ -26,7 +26,7 @@ typedef struct{
     ArcNode *head; //头指针
 }VertexNode;
 
-//
+//all
 typedef struct{
     VertexNode vertex[MAXVEX];
     int vexnum;//顶点数
