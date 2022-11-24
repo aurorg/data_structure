@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//邻接矩阵
 typedef char VertexType; //顶点类型自己定义
 typedef int EdgeType;    //边上的权值类型自己定义
 #define MAXVEX 100       //最大的顶点数
