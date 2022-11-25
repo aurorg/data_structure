@@ -22,13 +22,15 @@ typedef struct BiTree_Node{
     struct BiTree_Node*lchild;
     struct BiTree_Node*rchild;
 } *treenode;
+
 treenode createBiTree();
 void preOrder(treenode root,int depth);
 int max=0;
+
 int main(){
     treenode root;
     root=createBiTree();
-    preOrder(root,1);
+    preOrder(root,1); //开始让depth的值为1，从第一层开始
     printf("%d",max);
 }
  
