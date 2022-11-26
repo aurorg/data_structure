@@ -62,3 +62,8 @@ void CreateALGraph(GraphAdjList *G){
 
     }
 }
+main(){
+    AdjList g;
+    CreateALGraph(&g);
+    return 0;
+}

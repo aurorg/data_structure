@@ -53,10 +53,12 @@ typedef struct ArcNode {
     int adjvex;
     struct ArcNode *next;
 } ArcNode;
+
 typedef struct {
     Vextype vexdata;
     ArcNode *head;
-} VertexNode;
+}VertexNode;
+
 typedef struct {
     VertexNode vertex[MAXVEX];
     int vexnum;
