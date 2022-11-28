@@ -35,3 +35,11 @@ void CreateMGraph(MGraph *G){
     }
 }
 //时间复杂度：n+n*n+e;
+
+int main(void)
+{    
+	MGraph G;    
+	CreateMGraph(&G);
+	
+	return 0;
+}
