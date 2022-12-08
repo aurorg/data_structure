@@ -12,6 +12,7 @@
 typedef int Status;  //Status是函数的类型，它的值是函数结果状态代码，比如ok
 typedef int ElemType;  //ElemType类型自己根据需求定义，这里是int
 
+
 typedef struct{
     ElemType data[MAXSIZE];  //数组，存储数据元素
     int length; //线性表当前的长度
