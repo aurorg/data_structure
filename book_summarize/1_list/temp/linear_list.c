@@ -52,5 +52,38 @@ Status GetElem(SqList L,int i,ElemType *e){
     if(L.length==0 || i<1 || i>L.length){
         return ERROR;
     }
-    
+    *e = L.data[i - 1];
+
+    return OK;
+}
+
+int LocateElem(SqList L,ElemType e){
+    int i;
+    if(L.length==0){
+        return 0;
+    }
+    if(i>=L.length){
+        return 0;
+    }
+    for (i = 0; i < L.length;i++){
+        if(L.data[i]==e){
+            break;
+        }
+    }
+    return i + 1;
+}
+
+Status ListInsert(SqList *L,int i,ElemType e){
+    int j;
+    if(L->length==MAXSIZE){
+        return ERROR;
+    }
+    if(i>1 || i>L->length+1){
+        return ERROR;
+    }
+    if(i<=L->length){
+        for (j = L->length - 1; j >= i - 1;j--){
+            
+        }
+    }
 }
